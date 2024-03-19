@@ -20,14 +20,14 @@ RUN tar -xf mpfr.tar.xz
 # Setup GMP library
 WORKDIR /home/lac/libs/gmp-6.2.1
 RUN ./configure
-RUN make
+RUN make -j
 RUN make check
 RUN make install
 
 # Setup MPFR library
 WORKDIR /home/lac/libs/mpfr-4.2.1
 RUN ./configure
-RUN make
+RUN make -j
 RUN make check
 RUN make install
 
@@ -43,4 +43,4 @@ RUN make install
 RUN mkdir -p /home/lac/_build
 WORKDIR /home/lac/_build
 RUN cmake ..
-RUN make
+RUN make -j

@@ -2,5 +2,5 @@
 	path = scripts/lattice-estimator
 	url = https://github.com/malb/lattice-estimator
 [submodule "code/flint"]
-	path = code/flint
+	path = code/libs/flint
 	url = https://github.com/flintlib/flint
